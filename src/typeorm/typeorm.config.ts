@@ -26,5 +26,5 @@ export const TypeormConfig = TypeOrmModule.forRoot({
     rejectUnauthorized: false, // required for ssl connection
   },
   synchronize: true, // set to false in prod
-  logging: true,
+  logging: false,
 });
