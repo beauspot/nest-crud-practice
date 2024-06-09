@@ -63,7 +63,14 @@ export class UsersService {
         savedUsersData.phoneNumber,
         savedUsersData.id
       );
-      return { ...savedUsersData, token };
+      return {
+        users_detail: {
+          fullname: savedUsersData.fullName,
+          email: savedUsersData.email,
+          phoneno: savedUsersData.phoneNumber,
+        },
+        token,
+      };
     } catch (error) {
       //  console.error("Error creating user:", error);
       throw new InternalServerErrorException(
